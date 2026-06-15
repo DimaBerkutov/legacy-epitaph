@@ -12,7 +12,7 @@ Legacy Epitaph is an interactive timeline and repository for programming languag
 
 ## GitHub Repo
 
-https://github.com/DimaBerkutov/corporate-resource-suite
+https://dimaberkutov.github.io/legacy-epitaph/
 
 ## Features
 
