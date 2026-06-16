@@ -44,7 +44,7 @@ export const localStorageAdapter = {
   async update(id, patch) {
     const rows = readTable();
     const idx = rows.findIndex((row) => row.id === id);
-    if (idx === -1) throw new Error(`Language с id="${id}" не найден`);
+    if (idx === -1) throw new Error(`Language with id="${id}" not found`);
     rows[idx] = { ...rows[idx], ...patch, id };
     writeTable(rows);
     return rows[idx];

@@ -1,5 +1,5 @@
-// Стартовый набор языков. Используется при первом запуске, если хранилище пусто.
-// Поля совпадают со схемой будущей таблицы Supabase `languages` (snake_case).
+// Initial language dataset. Used on first run if storage is empty.
+// Fields match the schema of future Supabase `languages` table (snake_case).
 
 export const SEED_LANGUAGES = [
   {
@@ -8,9 +8,9 @@ export const SEED_LANGUAGES = [
     year_created: 1957,
     year_deprecated: null,
     creator: 'John Backus / IBM',
-    paradigm: ['процедурный', 'императивный'],
+    paradigm: ['procedural', 'imperative'],
     popularity: 18,
-    epitaph: 'Дед всех языков. Всё ещё считает погоду и звёзды.',
+    epitaph: 'Grandfather of all languages. Still calculates weather and stars.',
     descendants: ['BASIC', 'C', 'PL/I'],
   },
   {
@@ -19,9 +19,9 @@ export const SEED_LANGUAGES = [
     year_created: 1959,
     year_deprecated: null,
     creator: 'CODASYL / Grace Hopper',
-    paradigm: ['процедурный', 'императивный'],
+    paradigm: ['procedural', 'imperative'],
     popularity: 12,
-    epitaph: 'Хоронили не раз — но банки до сих пор держат его за руку.',
+    epitaph: 'Buried many times — but banks still hold its hand.',
     descendants: [],
   },
   {
@@ -30,9 +30,9 @@ export const SEED_LANGUAGES = [
     year_created: 1958,
     year_deprecated: null,
     creator: 'John McCarthy',
-    paradigm: ['функциональный'],
+    paradigm: ['functional'],
     popularity: 14,
-    epitaph: 'Скобки вечны. Идеи — тоже.',
+    epitaph: 'Parentheses are eternal. Ideas too.',
     descendants: ['Scheme', 'Clojure', 'Common Lisp'],
   },
   {
@@ -40,10 +40,10 @@ export const SEED_LANGUAGES = [
     status: 'legacy',
     year_created: 1958,
     year_deprecated: 1980,
-    creator: 'Комитет ALGOL',
-    paradigm: ['процедурный', 'структурный'],
+    creator: 'ALGOL Committee',
+    paradigm: ['procedural', 'structured'],
     popularity: 3,
-    epitaph: 'Не выжил сам, но его синтаксис живёт почти во всём.',
+    epitaph: 'Did not survive, but its syntax lives in almost everything.',
     descendants: ['Pascal', 'C', 'Simula'],
   },
   {
@@ -52,9 +52,9 @@ export const SEED_LANGUAGES = [
     year_created: 1970,
     year_deprecated: 2000,
     creator: 'Niklaus Wirth',
-    paradigm: ['процедурный', 'структурный'],
+    paradigm: ['procedural', 'structured'],
     popularity: 8,
-    epitaph: 'Учил дисциплине целое поколение. Begin … end.',
+    epitaph: 'Taught discipline to a whole generation. Begin … end.',
     descendants: ['Delphi', 'Modula-2'],
   },
   {
@@ -63,9 +63,9 @@ export const SEED_LANGUAGES = [
     year_created: 1972,
     year_deprecated: null,
     creator: 'Dennis Ritchie',
-    paradigm: ['процедурный', 'императивный'],
+    paradigm: ['procedural', 'imperative'],
     popularity: 88,
-    epitaph: 'Лежит в фундаменте всего, что вы запускаете прямо сейчас.',
+    epitaph: 'Lies at the foundation of everything you run right now.',
     descendants: ['C++', 'Objective-C', 'Go', 'Rust'],
   },
   {
@@ -74,9 +74,9 @@ export const SEED_LANGUAGES = [
     year_created: 1985,
     year_deprecated: null,
     creator: 'Bjarne Stroustrup',
-    paradigm: ['ООП', 'процедурный', 'обобщённый'],
+    paradigm: ['OOP', 'procedural', 'generic'],
     popularity: 84,
-    epitaph: 'Сложен, как сама вселенная, и так же быстр.',
+    epitaph: 'Complex as the universe, and just as fast.',
     descendants: ['C#', 'Rust', 'D'],
   },
   {
@@ -85,9 +85,9 @@ export const SEED_LANGUAGES = [
     year_created: 1987,
     year_deprecated: null,
     creator: 'Larry Wall',
-    paradigm: ['процедурный', 'функциональный'],
+    paradigm: ['procedural', 'functional'],
     popularity: 16,
-    epitaph: 'Швейцарский нож интернета 90-х. Только не читайте чужой код.',
+    epitaph: "Swiss army knife of the 90s internet. Just don't read other people's code.",
     descendants: ['Raku', 'PHP'],
   },
   {
@@ -96,9 +96,9 @@ export const SEED_LANGUAGES = [
     year_created: 1991,
     year_deprecated: null,
     creator: 'Guido van Rossum',
-    paradigm: ['ООП', 'функциональный', 'императивный'],
+    paradigm: ['OOP', 'functional', 'imperative'],
     popularity: 96,
-    epitaph: 'Простота, которая захватила науку и ИИ.',
+    epitaph: 'Simplicity that captured science and AI.',
     descendants: [],
   },
   {
@@ -107,9 +107,9 @@ export const SEED_LANGUAGES = [
     year_created: 1995,
     year_deprecated: null,
     creator: 'James Gosling / Sun',
-    paradigm: ['ООП', 'императивный'],
+    paradigm: ['OOP', 'imperative'],
     popularity: 90,
-    epitaph: 'Write once, run anywhere — и до сих пор бежит.',
+    epitaph: 'Write once, run anywhere — and still runs.',
     descendants: ['Kotlin', 'Scala', 'Clojure'],
   },
   {
@@ -118,9 +118,9 @@ export const SEED_LANGUAGES = [
     year_created: 1995,
     year_deprecated: null,
     creator: 'Brendan Eich',
-    paradigm: ['функциональный', 'ООП', 'событийный'],
+    paradigm: ['functional', 'OOP', 'event-driven'],
     popularity: 98,
-    epitaph: 'Создан за 10 дней. Управляет всем вебом.',
+    epitaph: 'Created in 10 days. Controls the entire web.',
     descendants: ['TypeScript', 'CoffeeScript'],
   },
   {
@@ -129,9 +129,9 @@ export const SEED_LANGUAGES = [
     year_created: 1995,
     year_deprecated: null,
     creator: 'Yukihiro Matsumoto',
-    paradigm: ['ООП', 'функциональный'],
+    paradigm: ['OOP', 'functional'],
     popularity: 55,
-    epitaph: 'Сделан для счастья программиста.',
+    epitaph: 'Designed for programmer happiness.',
     descendants: ['Crystal'],
   },
   {
@@ -140,9 +140,9 @@ export const SEED_LANGUAGES = [
     year_created: 1998,
     year_deprecated: 2020,
     creator: 'Macromedia / Adobe',
-    paradigm: ['ООП', 'событийный'],
+    paradigm: ['OOP', 'event-driven'],
     popularity: 2,
-    epitaph: 'Анимировал детство интернета. Покойся с миром, 2020.',
+    epitaph: 'Animated the childhood of the internet. Rest in peace, 2020.',
     descendants: [],
   },
   {
@@ -151,9 +151,9 @@ export const SEED_LANGUAGES = [
     year_created: 2009,
     year_deprecated: null,
     creator: 'Google (Pike, Thompson, Griesemer)',
-    paradigm: ['процедурный', 'конкурентный'],
+    paradigm: ['procedural', 'concurrent'],
     popularity: 78,
-    epitaph: 'Простой, как C, но с горутинами.',
+    epitaph: 'Simple as C, but with goroutines.',
     descendants: [],
   },
   {
@@ -162,9 +162,9 @@ export const SEED_LANGUAGES = [
     year_created: 2010,
     year_deprecated: null,
     creator: 'Graydon Hoare / Mozilla',
-    paradigm: ['системный', 'функциональный', 'императивный'],
+    paradigm: ['systems', 'functional', 'imperative'],
     popularity: 80,
-    epitaph: 'Безопасность памяти без сборщика мусора. Borrow checker любит вас.',
+    epitaph: 'Memory safety without garbage collector. Borrow checker loves you.',
     descendants: [],
   },
 ];

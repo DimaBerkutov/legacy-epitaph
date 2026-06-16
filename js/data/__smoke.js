@@ -1,7 +1,9 @@
-// === Smoke-тест Data Layer ===
-// НЕ подключается в index.html. Запуск вручную из DevTools-консоли:
+// Smoke test for Data Layer
+
+// NOT loaded in index.html. Run manually from DevTools console:
 //   import('./js/data/__smoke.js').then(m => m.runSmoke());
-// Проверяет CRUD-цикл сервиса и базовые инварианты. Логирует ассерты.
+// Checks CRUD cycle and basic invariants. Logs assertions.
+
 import { languageService } from './languageService.js';
 
 function assert(cond, msg) {
@@ -11,38 +13,38 @@ function assert(cond, msg) {
 }
 
 export async function runSmoke() {
-  console.group('Legacy Epitaph — smoke-тест Data Layer');
+  console.group('Legacy Epitaph — smoke test for Data Layer');
 
   await languageService.seedIfEmpty();
   const before = await languageService.getAll();
-  assert(before.length > 0, `seed наполнил хранилище (${before.length} записей)`);
+  assert(before.length > 0, `seed populated the store (${before.length} records)`);
 
   const living = await languageService.getLiving();
-  assert(living.every((l) => l.status === 'living'), 'getLiving() возвращает только living');
+  assert(living.every((l) => l.status === 'living'), 'getLiving() returns only living');
 
   const timeline = await languageService.getEvolutionTimeline();
   const sorted = timeline.every((l, i) => i === 0 || timeline[i - 1].year_created <= l.year_created);
-  assert(sorted, 'getEvolutionTimeline() отсортирован по year_created');
+  assert(sorted, 'getEvolutionTimeline() is sorted by year_created');
 
   // create → getById → update → remove
   const created = await languageService.create({
     name: '__TestLang__', status: 'living', year_created: 2024, popularity: 1, epitaph: 'temp',
   });
-  assert(created.id && created.created_at, 'create() выдал id и created_at');
+  assert(created.id && created.created_at, 'create() generates id and created_at');
 
   const fetched = await languageService.getById(created.id);
-  assert(fetched && fetched.name === '__TestLang__', 'getById() находит созданную запись');
+  assert(fetched && fetched.name === '__TestLang__', 'getById() finds the created record');
 
   const updated = await languageService.update(created.id, { popularity: 42 });
-  assert(updated.popularity === 42, 'update() меняет поле');
+  assert(updated.popularity === 42, 'update() changes the field');
 
   await languageService.remove(created.id);
   const gone = await languageService.getById(created.id);
-  assert(gone === null, 'remove() удаляет запись');
+  assert(gone === null, 'remove() deletes the record');
 
   const after = await languageService.getAll();
-  assert(after.length === before.length, 'итоговое число записей не изменилось');
+  assert(after.length === before.length, 'final record count unchanged');
 
   console.groupEnd();
-  return 'smoke-тест завершён';
+  return 'smoke test completed';
 }
