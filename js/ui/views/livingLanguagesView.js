@@ -1,6 +1,6 @@
 import { el, mount } from '../dom.js';
-import { languageService } from '../../../data/languageService.js';
-import { languageCard } from '../../components/languageCard.js';
+import { languageService } from '../../data/languageService.js';
+import { languageCard } from '../components/languageCard.js';
 
 export async function livingLanguagesView() {
   const languages = await languageService.getLiving();

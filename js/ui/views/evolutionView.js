@@ -1,6 +1,6 @@
 import { el } from '../dom.js';
-import { languageService } from '../../../data/languageService.js';
-import { timelineItem } from '../../components/timelineItem.js';
+import { languageService } from '../../data/languageService.js';
+import { timelineItem } from '../components/timelineItem.js';
 
 export async function evolutionView() {
   const languages = await languageService.getEvolutionTimeline();

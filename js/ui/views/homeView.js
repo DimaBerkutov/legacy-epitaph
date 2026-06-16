@@ -1,5 +1,5 @@
 import { el } from '../dom.js';
-import { languageService } from '../../../data/languageService.js';
+import { languageService } from '../../data/languageService.js';
 
 export async function homeView() {
   const stats = await languageService.getStats();
