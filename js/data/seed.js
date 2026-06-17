@@ -1,6 +1,3 @@
-// Initial language dataset. Used on first run if storage is empty.
-// Fields match the schema of future Supabase `languages` table (snake_case).
-
 export const SEED_LANGUAGES = [
   {
     name: 'Fortran',

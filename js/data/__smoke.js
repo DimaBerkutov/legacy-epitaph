@@ -1,9 +1,3 @@
-// Smoke test for Data Layer
-
-// NOT loaded in index.html. Run manually from DevTools console:
-//   import('./js/data/__smoke.js').then(m => m.runSmoke());
-// Checks CRUD cycle and basic invariants. Logs assertions.
-
 import { languageService } from './languageService.js';
 
 function assert(cond, msg) {
@@ -26,7 +20,6 @@ export async function runSmoke() {
   const sorted = timeline.every((l, i) => i === 0 || timeline[i - 1].year_created <= l.year_created);
   assert(sorted, 'getEvolutionTimeline() is sorted by year_created');
 
-  // create → getById → update → remove
   const created = await languageService.create({
     name: '__TestLang__', status: 'living', year_created: 2024, popularity: 1, epitaph: 'temp',
   });
